@@ -1,6 +1,6 @@
-const { jsPDF } = require('jspdf');
-const nodemailer = require('nodemailer');
-const mg = require('nodemailer-mailgun-transport');
+const { jsPDF } = import('jspdf');
+const nodemailer = import('nodemailer');
+const mg = import('nodemailer-mailgun-transport');
 
 const transporter = nodemailer.createTransport(
   mg({
