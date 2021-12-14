@@ -5,7 +5,23 @@
 </head>
 <body>
 
-<p>Test site to verify functions samples in the docs</p>
+<p>Test site to verify functions samples in the docs. Testing full samples only, not partial ones. Will try to compare those against the tested full samples for consistency.</p>
+
+<h3>Build with Javascript</h3>
+<ul>
+    <li><a href="/.netlify/functions/hello">hello.js</a></li>
+    <li><a href="/.netlify/functions/send-pdf-background">send-pdf-background.js</a></li>
+</ul>
+
+<p>Form to test bg function, expected to only work with kristen+test@netlify.com</p>
+<form action="/.netlify/functions/send-pdf-background" method="POST">
+    <label for="destination">Send mail to</label>
+    <input type="text" id="destination" name="destination" />
+    <button>Submit</button>
+  </form>
+
+<h3></h3>
+
 
 </body>
 </html>
