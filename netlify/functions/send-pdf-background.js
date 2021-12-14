@@ -20,7 +20,7 @@ exports.handler = async function (event) {
   );
   const info = await transporter.sendMail({
     from: process.env.MAILGUN_SENDER,
-    to: kristen-test@netlify.com,
+    to: process.env.MAILGUN_DESTINATION,
     subject: 'Your report is ready!',
     text: 'See attached report PDF',
     attachments: [
