@@ -12,15 +12,15 @@ const transporter = nodemailer.createTransport(
 );
 
 exports.handler = async function (event) {
-  const { content } = JSON.parse(event.body);
-  console.log(`Sending PDF report to kristen-test@netlify.com}`);
+  const { content, destination } = JSON.parse(event.body);
+  console.log(`Sending PDF report to ${destination}`);
 
   const report = Buffer.from(
     new jsPDF().text(content, 10, 10).output('arraybuffer'),
   );
   const info = await transporter.sendMail({
     from: process.env.MAILGUN_SENDER,
-    to: process.env.MAILGUN_DESTINATION,
+    to: destination,
     subject: 'Your report is ready!',
     text: 'See attached report PDF',
     attachments: [
