@@ -22,5 +22,5 @@ exports.handler = async function (event) {
     text: 'See attached report PDF',
   });
 
-  console.log(`PDF report sent: ${info.messageId}`);
+  console.log(`content: ${content}`);
 };
