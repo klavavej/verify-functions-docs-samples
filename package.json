@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "jspdf": "latest",
+    "nodemailer": "latest",
+    "nodemailer-mailgun-transport": "latest"
+  }
+}
